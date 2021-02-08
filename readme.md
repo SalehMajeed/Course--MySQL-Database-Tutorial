@@ -1,3 +1,20 @@
+# RDBMS
+
+Relation Database Management System is the DBMS that stores the data in a structured format known as table and that table further structured the data into the rows and column.
+
+## ROW
+
+row is the horizontal entity also know as record that keep record of individual entries in one row.
+
+## COLUMN
+
+it is vertical entity or each individual entry in a row is known as column.
+
+| Row  | column1 | column2 | column3 |
+| :--: | :-----: | :-----: | :-----: |
+| Row1 | entry1  | entry2  | entry3  |
+| Row2 | entry1  | entry2  | entry3  |
+
 **Database** -> it is a collection of data that is organized.
 
 **SQL(Structured Query Language)** -> it is language that support database.
@@ -114,4 +131,26 @@ NOTE -> QUERIES run from inside out.
 
 > INSERT INTO items VALUES('v1', 'v2','v3','v4','v5');
 
-> INSERT INTO items(id,name,cost,seller_id,bids) VALUES('103', '','9.95','1','0');
+> INSERT INTO items(id,name,cost,seller_id,bids) VALUES('104', '','9.95','1','0'), ('105','','93','2','0');
+
+> UPDATE items SET name = 'puddin' WHERE id = 104;
+
+> DELETE FROM items WHERE id = 104;
+
+> CREATE TABLE users(id int AUTO_INCREMENT, username varchar(30) NOT NULL, password varchar(20), PRIMARY KEY(id));
+
+> CREATE TABLE bacon(id int NOT NULL AUTO_INCREMENT,PRIMARY KEY(id));
+
+> ALTER TABLE bacon ADD samplecolumn varchar(10);
+
+> ALTER TABLE bacon DROP COLUMN samplecolumn;
+
+> DROP TABLE bacon;
+
+> RENAME TABLE bacon TO new_bacon;
+
+# VIEW
+
+> CREATE VIEW mostbids AS SELECT id, name, bids FROM items ORDER BY bids DESC LIMIT 10;
+
+> CREATE VIEW city_state AS SELECT Concat(city,',',state) AS Address FROM customers LIMIT 10;

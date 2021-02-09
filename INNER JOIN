@@ -1,0 +1,28 @@
+INNER JOIN
+
+SELECT * FROM TABLE_1 INNER JOIN TABLE_2 where TABLE_1.id = TABLE_2.id;   // 3
+SELECT * FROM TABLE_1 LEFT OUTER JOIN TABLE_2 ON TABLE_1.id = TABLE_2.id;   // 3
+SELECT DISTINCT id FROM TABLE_1;
+SELECT id, COUNT(*) FROM TABLE_1 GROUP BY(id);
+
+
+row -> entity individual data;
+columns -> entries
+
+TABLE_1
+id
+1
+1
+0
+
+TABLE_2
+id
+1
+1
+0
+1
+0
+
+2 * 3 = 6
+1 * 2 = 2
+      = 8
